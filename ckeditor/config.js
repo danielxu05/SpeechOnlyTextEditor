@@ -21,11 +21,13 @@ CKEDITOR.editorConfig = function( config ) {
 		'/',
 		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
 		{ name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		{name:'ckwebspeech'},
+		{ name:'ckwebspeech'},
 		{ name: 'styles' },
 		{ name: 'colors' },
 		{ name: 'about' }
 	];
+	config.extraPlugins = 'autogrow,codesnippet,prism,codemirror';
+	
 
 	// Remove some buttons provided by the standard plugins, which are
 	// not needed in the Standard(s) toolbar.
@@ -36,4 +38,5 @@ CKEDITOR.editorConfig = function( config ) {
 
 	// Simplify the dialog windows.
 	config.removeDialogTabs = 'image:advanced;link:advanced';
+
 };
